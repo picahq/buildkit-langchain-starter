@@ -105,6 +105,13 @@ python -m src.backend
 uvicorn src.backend:app --reload --host 0.0.0.0 --port 8000
 ```
 
+## Learn More
+
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction) - Learn about LangChain
+- [FastAPI Documentation](https://fastapi.tiangolo.com/) - Learn about FastAPI  
+- [OpenAI API Documentation](https://platform.openai.com/docs) - Learn about OpenAI's API
+- [BuildKit Documentation](https://buildkit.picaos.com/integrations) - Learn about BuildKit
+
 ## Notes
 - Uses `langchain-openai` provider package (recommended modern setup)
 - FastAPI provides automatic API documentation at `/docs`

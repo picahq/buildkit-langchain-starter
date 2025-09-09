@@ -34,11 +34,12 @@ async def chat_endpoint(request: ChatRequest):
         if not request.message.strip():
             raise HTTPException(status_code=400, detail="Message cannot be empty")
         
-        agent_response = run_agent_query(request.message)
+        # Pass conversation_id to maintain chat history
+        agent_response, conversation_id = run_agent_query(request.message, request.conversation_id)
         
         return ChatResponse(
             response=agent_response,
-            conversation_id=request.conversation_id
+            conversation_id=conversation_id
         )
     
     except Exception as e:

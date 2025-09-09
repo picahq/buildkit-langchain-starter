@@ -76,24 +76,6 @@ curl -X POST "http://localhost:8000/api/chat" \
 
 To add new tools to your agent, edit `src/agent.py`:
 
-```python
-from langchain.tools import tool
-
-@tool
-def your_custom_tool(input: str) -> str:
-    """Description of what your tool does."""
-    # Your tool logic here
-    return "Tool result"
-
-# Add your tool to the agent in build_agent()
-agent = initialize_agent(
-    tools=[your_custom_tool],  # Add here
-    llm=llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    verbose=True,
-)
-```
-
 ## Development
 
 ### Running in Development Mode
